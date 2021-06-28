@@ -1,72 +1,18 @@
-
-
-<!-- Toolbar -->
-<meta charset="utf-8">
-<title>TABLICA OGŁOSZEŃ</title>
-<link rel="stylesheet" href="app.component.css">
-<!--<div class="toolbar" role="banner">-->
-
-<!--  <span>TABLICA OGŁOSZEŃ</span>-->
-<!--    <div class="spacer"></div>-->
-
-<!--</div>-->
-<nav>
-  <img src="https://www.linux.ime.usp.br/~suhalonso/codelab.png">
-  <ul>
-    <a href=# class="menu"><li>Strona główna</li></a>
-    <a href=# class="menu"><li>Dodaj ogłoszenie</li></a>
-    <a href=# class="menu"><li>Zaakceptowane ogłoszenia</li></a>
-    <a href=# class="menu"><li>Wybrane ogłoszenia</li></a>
-    <a href=# class="registrar"><li>Rejestracja</li></a>
-    <a href=# class="login"><li>Logowanie</li></a>
-  </ul>
-</nav>
-
-<section>
-  <a href=#><div class="container">
-    <img src="">
-    <h2>Nauka CSS & HTML</h2>
-    <span class="autor">Włodek Młodek</span><br/>
-    <span class="preco">40 zł</span>
-    <div class="tags">
-      <span class="wishlist">Wishlist</span>
+<div class="login" *ngIf="(isLogin$ | async) == false">
+<div class="container">
+  <form [formGroup]="loginForm" class="form-signin" (ngSubmit)="onSubmit()">
+    <h1 class="h3 mb-3 font-weight-normal">Zaloguj się</h1>
+    <label for="inputEmail" class="sr-only">Email Address</label>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus formControlName="email">
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required formControlName="password">
+    <div class="checkbox mb-3">
     </div>
-  </div></a>
-
-  <a href=#><div class="container">
-    <img src="corsa.jpg">
-    <h2>Opel Corsa</h2>
-    <span class="autor">Joanna Młynek</span><br/>
-    <span class="preco">10000 zł</span>
-    <del>12000 zł</del>
-    <div class="tags">
-      <span class="wishlist">Wishlist</span>
-
-    </div>
-  </div></a>
-
-  <a href=#><div class="container">
-    <img src="src/rower.png">
-    <h2>Rower </h2>
-    <span class="autor">Jan Kowalski</span><br/>
-    <span class="preco">900 zł</span>
-    <del>1050,50zł</del>
-    <div class="tags">
-      <span class="wishlist">Wishlist</span>
-
-    </div>
-  </div></a>
-
-  <a href=#><div class="container">
-    <img src="">
-    <h2>Praca w pizza hut</h2>
-    <span class="autor">Pizza Hut</span><br/>
-    <span class="preco">3000 zł</span>
-    <div class="tags">
-      <span class="wishlist">Wishlist</span>
-    </div>
-  </div></a>
-</section>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="!loginForm.valid">Sign in</button>
+  </form>
+</div>
+</div>
+<app-dashboard *ngIf="(isLogin$ | async) == true"></app-dashboard>
 
 
 

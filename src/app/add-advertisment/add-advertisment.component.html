@@ -1,0 +1,27 @@
+<form class="form" [formGroup]="addAdvertismentForm" (ngSubmit)="onSubmit()">
+  <mat-form-field class="form-row">
+    <mat-label>Tytuł</mat-label>
+    <input matInput formControlName="title" placeholder="title">
+  </mat-form-field>
+
+  <mat-form-field class="form-row">
+    <mat-label>Imie</mat-label>
+    <input matInput formControlName="name" placeholder="name">
+  </mat-form-field>
+
+  <mat-form-field class="form-row">
+    <mat-label>Nazwisko</mat-label>
+    <input matInput formControlName="surname" placeholder="surname">
+  </mat-form-field>
+
+  <mat-form-field class="form-row">
+    <mat-label>Cena</mat-label>
+    <input type="number" matInput formControlName="price" placeholder="price">
+  </mat-form-field>
+
+  <mat-form-field class="form-row">
+    <mat-label>Opis</mat-label>
+    <input matInput formControlName="description" placeholder="description">
+  </mat-form-field>
+  <button type="submit" mat-raised-button color="primary">Dodaj ogłoszenie</button>
+</form>
