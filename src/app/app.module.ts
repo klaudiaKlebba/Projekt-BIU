@@ -18,7 +18,6 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { AddAdvertismentComponent } from './add-advertisment/add-advertisment.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { WhishlistComponent } from './whishlist/whishlist.component';
 import {StoreModule} from "@ngrx/store";
 import {AdvertisementReducer} from "./add-advertisment/+state/advertisment.reducers";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
@@ -31,6 +30,9 @@ import { WhishitemAdvertisementComponent } from './whishitem-advertisement/whish
 import { NavComponent } from './nav/nav.component';
 import {AppReducers} from "./+state/app.reducers";
 import {AppFacade} from "./+state/app.facade";
+import { DetailsAdvertisementsComponent } from './details-advertisements/details-advertisements.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -39,11 +41,13 @@ import {AppFacade} from "./+state/app.facade";
     LoginComponent,
     DashboardComponent,
     AddAdvertismentComponent,
-    WhishlistComponent,
     ListAdvertisementsComponent,
     WhishlistAdvertisementComponent,
     WhishitemAdvertisementComponent,
-    NavComponent
+    NavComponent,
+    DetailsAdvertisementsComponent,
+    FooterComponent,
+    HeaderComponent
 
 
   ],

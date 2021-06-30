@@ -1,7 +1,8 @@
-
-<div  *ngFor="let advertisement of whishListAdvertisements$"   class="advertisement">
-
- <app-whishitem-advertisement  [advertisement]="advertisement" ></app-whishitem-advertisement>
-
+<div *ngIf="whishListAdvertisements.length == 0">
+  <h2>Nie dodano żadnych przedmiotów do listy życzeń</h2>
 </div>
+<app-whishitem-advertisement
+  *ngFor="let advertisement of whishListAdvertisements"
+  [advertisement]="advertisement">
+</app-whishitem-advertisement>
 

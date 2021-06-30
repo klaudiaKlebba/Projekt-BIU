@@ -8,12 +8,18 @@ import {Advertisement} from "../resources/interfaces/advertisement.interface";
   styleUrls: ['./whishlist-advertisement.component.css']
 })
 export class WhishlistAdvertisementComponent implements OnInit {
-  advertisements$ = this.advertismentsFacade.advertisements$;
-  whishListAdvertisements$: Advertisement[] = [];
+  whishListAdvertisements: Advertisement[] = [];
   constructor(private advertismentsFacade: AdvertismentFacade) {}
 
   ngOnInit(): void {
-
+    this.advertismentsFacade.advertisements$.subscribe((advertisments) => {
+      this.whishListAdvertisements = [];
+      advertisments.forEach((advertisment) => {
+        if (advertisment.isWhishList == true) {
+          this.whishListAdvertisements.push(advertisment);
+        }
+      });
+    });
 
   }
 }

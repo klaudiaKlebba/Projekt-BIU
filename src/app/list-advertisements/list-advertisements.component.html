@@ -1,12 +1,6 @@
-<div *ngFor="let advertisement of advertisements$ | async" class="advertisement">
-  <h2>{{advertisement.title}}</h2>
-  <span class="autor">{{advertisement.name}} {{advertisement.surname}}</span><br/>
-  <span class="preco">{{advertisement.price}} zł</span><br/>
-<!--  <span class="preco">Ulubione: {{advertisement.isWhishList}}</span>-->
-  <button mat-icon-button color="warn" *ngIf="advertisement.isWhishList == true" (click)="toogleWhishList(advertisement.id)">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button *ngIf="advertisement.isWhishList == false" (click)="toogleWhishList(advertisement.id)">
-    <mat-icon>favorite</mat-icon>
-  </button>
-</div>
+
+
+<app-whishitem-advertisement *ngFor="let advertisement of advertisements$ | async" [advertisement]="advertisement">
+
+</app-whishitem-advertisement>
+

@@ -42,6 +42,13 @@ export function AdvertisementReducer(
         ...state,
         advertisements: state.advertisements.map((advertisement) => advertisement.id == action.payload ? {...advertisement, isWhishList: !advertisement.isWhishList} : advertisement)    }
     }
+    case AdvertisementActionsTypes.delAdvertisement: {
+
+      return {
+        ...state,
+        advertisements: state.advertisements.filter((advertisement)=>advertisement.id!==action.payload)
+      }
+    }
     default:
       return{
         ...state

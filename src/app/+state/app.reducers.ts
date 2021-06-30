@@ -1,6 +1,6 @@
 import {AppActions, AppActionsTypes} from "./app.actions";
 
-const appInitialState = {isLoggin: true}
+const appInitialState = {isLoggin: false}
 export function AppReducers(
   state = appInitialState,
   action: AppActions,

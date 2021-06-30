@@ -14,27 +14,11 @@ export class AppComponent {
 
 
 
-  loginForm = this.fb.group({
-    email: ['', Validators.required],
-    password: ['', Validators.required],
-
-  });
-
-
 
   constructor(private fb: FormBuilder, private route: Router, private appFacade: AppFacade) {}
   ngOnInit(): void{}
 
-  onSubmit() {
-    console.warn(this.loginForm.value);
 
-    if(this.loginForm.value.email == 'klaudia@wp.pl' && this.loginForm.value.password == "klaudia"){
-
-      this.appFacade.toggleLogin();
-    } else{
-      alert('Zły e-mail bądź hasło');
-    }
-  }
 
 
 }

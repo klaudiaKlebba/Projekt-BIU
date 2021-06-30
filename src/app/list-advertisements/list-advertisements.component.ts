@@ -15,8 +15,5 @@ export class ListAdvertisementsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toogleWhishList(id: string) {
-    this.advertismentsFacade.whishListAdvertisement(id)
-  }
 
 }

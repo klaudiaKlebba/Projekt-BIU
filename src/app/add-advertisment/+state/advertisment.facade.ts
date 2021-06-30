@@ -2,7 +2,7 @@ import {Injectable} from "@angular/core";
 import {AppState} from "../../+state/app.state";
 import {Store} from "@ngrx/store";
 import {Advertisement} from "../../resources/interfaces/advertisement.interface";
-import {AddAdvertisement, WhishListAdvertisement} from "./advertisement.actions";
+import {AddAdvertisement, DelAdvertisement, WhishListAdvertisement} from "./advertisement.actions";
 import {selectAdvertisementsAdvertisements} from "./advertisements.selector";
 
 @Injectable()
@@ -16,6 +16,9 @@ export class AdvertismentFacade{
   }
 whishListAdvertisement(id: string){
     this.store.dispatch(new WhishListAdvertisement(id))
+}
+delAdvertisement(id: string){
+    this.store.dispatch(new DelAdvertisement(id))
 }
 
 }

@@ -18,15 +18,11 @@ export class DelAdvertisement implements Action{
   constructor(public payload: string) {}
 }
 
-export class UptAdvertisement implements Action{
-  readonly type = AdvertisementActionsTypes.uptAdvertisement;
-  constructor(public payload: any) {}
-}
 
 export class WhishListAdvertisement implements Action{
   readonly type = AdvertisementActionsTypes.whishListAdvertisement;
   constructor(public payload: string) {}
 }
 
-export type AdvertisemnetsAction = AddAdvertisement | DelAdvertisement | UptAdvertisement | WhishListAdvertisement;
+export type AdvertisemnetsAction = AddAdvertisement | DelAdvertisement | WhishListAdvertisement;
 

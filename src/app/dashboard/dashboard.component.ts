@@ -10,14 +10,9 @@ import {WhishlistAdvertisementComponent} from "../whishlist-advertisement/whishl
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) {}
+  constructor() {}
 
   ngOnInit(): void {
   }
-  openAddAdvertisement(){
-    this.dialog.open(AddAdvertismentComponent)
-  }
-  openWhishListAdvertisements(){
-    this.dialog.open(WhishlistAdvertisementComponent)
-  }
+
 }

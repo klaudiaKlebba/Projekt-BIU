@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder} from '@angular/forms';
 import {Router} from "@angular/router";
+import {AppFacade} from "../+state/app.facade";
 
 @Component({
   selector: 'app-login',
@@ -19,15 +20,14 @@ export class LoginComponent implements OnInit{
 
 
 
-  constructor(private fb: FormBuilder, private route: Router) {}
+  constructor(private fb: FormBuilder, private route: Router, private appFacade: AppFacade) {}
   ngOnInit(): void{}
 
   onSubmit() {
-    console.warn(this.loginForm.value);
 
     if(this.loginForm.value.email == 'klaudia@wp.pl' && this.loginForm.value.password == "klaudia"){
-      this.route.navigate(['/app/app.component.html']);
 
+      this.appFacade.toggleLogin();
     } else{
       alert('Zły e-mail bądź hasło');
     }

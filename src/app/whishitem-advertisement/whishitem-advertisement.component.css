@@ -1,0 +1,84 @@
+:host {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+
+
+/* CONTENTS */
+
+section{
+  padding-top: 130px; /* Fix navbar overlapping content */
+  text-align:center;
+}
+
+.advertisement{
+  border: 1px #808080 solid;
+  border-radius: 5px;
+  width: 250px;
+  margin: 15px;
+
+  text-align: left;
+  text-decoration: none;
+  color: black;
+
+  display: inline-block;
+  vertical-align: top;
+
+  box-shadow: 0 20px 25px -5px rgb(0, 0, 0, 0.1),
+  0 10px 10px -5px rgb(0, 0, 0, 0.04);
+}
+
+.advertisement:hover{
+  transform: scale(1.1)
+}
+
+div h2,
+span{
+  font-weight: normal;
+  margin: 5px;
+  line-height: 25px;
+}
+
+del,
+.autor{
+  color: #80808f;
+  font-size: 15px;
+}
+
+.preco{
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.tags > span{
+  border: 1px black solid;
+  border-radius: 5px;
+  padding: 3px;
+  font-size: 15px;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.most-watched{
+  background-color: #90ee90;
+}
+
+.beginner-friendly{
+  background-color: #87cefa;
+}
+
+.wishlist{
+  background-color: #ffa07a;
+}
+
+.bestseller{
+  background-color: #ffffe0;
+}
+.image{
+  width: 100%;
+}

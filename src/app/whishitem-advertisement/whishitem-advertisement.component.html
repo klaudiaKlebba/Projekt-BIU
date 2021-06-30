@@ -1,6 +1,14 @@
+<div class="advertisement">
 <h2>{{advertisement.title}}</h2>
 <span class="autor">{{advertisement.name}} {{advertisement.surname}}</span><br/>
 <span class="preco">{{advertisement.price}} zł</span><br/>
-<button mat-icon-button color="warn" *ngIf="advertisement.isWhishList == true" (click)="toogleWhishList(advertisement.id)">
-  <mat-icon>favorite</mat-icon>
-</button>
+  <button mat-icon-button [color]="advertisement.isWhishList == true ? 'warn' : null" (click)="toogleWhishList(advertisement.id)">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button (click)="openDetailsAdvertisement(advertisement)">
+    <mat-icon>visibility</mat-icon>
+  </button>
+  <button mat-icon-button (click)="delAdvertisement(advertisement.id)">
+    <mat-icon>delete</mat-icon>
+  </button>
+</div>
